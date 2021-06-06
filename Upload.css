@@ -1,4 +1,20 @@
-.upload-component{
-    padding-top: 100px;
-    text-align: center;
+.upload-component {
+  text-align: center;
+}
+.uploading {
+  padding-bottom: 2rem;
+}
+.box-preview {
+  margin: auto;
+  width: 600px;
+  height: 300px;
+  object-fit: contain;
+  background-color: #fff;
+  border-color: #000;
+  border-style: inset;
+  border-width: 5px;
+}
+img {
+  width: 600px;
+  height: 300px;
 }

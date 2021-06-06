@@ -1,8 +1,8 @@
-navbar{
-    display: flex;
-    justify-content: space-between;
-    margin: 20px 175px 0 10px;
+navbar {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 5rem 0 2rem;
 }
-.about{
-    font-size: 1.5rem;
+.about {
+  font-size: 1.5rem;
 }
