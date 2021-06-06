@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import './Upload.css';
-import './Preview.css';
 function Upload(props) {
     const [selectedFile, setSelectedFile] = useState(null);
     const [{src,alt}, setFile] = useState({
@@ -44,11 +43,8 @@ function Upload(props) {
         else {
             return (
               <div>
-                <div>
-                    <h4>Choose before Pressing the Upload button</h4>
-                </div>
                 <div className="box-preview">
-
+                  <h4>Choose before Pressing the Upload button</h4>
                 </div>
               </div>  
             );
@@ -60,7 +56,7 @@ function Upload(props) {
             <h1>
             Please Upload a File
             </h1>
-            <div>
+            <div className="uploading">
                 <input type="file" accept="image/*" onChange={onFileChange} />
                 <button onClick={onFileUpload}>
                   Upload
