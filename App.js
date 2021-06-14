@@ -1,11 +1,11 @@
 import './App.css';
-import Navbar from './Navbar';
+import Navbarx from './Navbarx';
 import Upload from './Upload';
 
 function App() {
   return (
       <div>
-          <Navbar/>
+        <Navbarx></Navbarx>
           <Upload/>
       </div>
        
