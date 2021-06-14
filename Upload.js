@@ -15,7 +15,7 @@ function Upload(props) {
          })
       };
 
-    const onFileUpload = (e) => {
+    const onFileUpload = () => {
       if(selectedFile != null)
       {
            setSelectedFile(["myFile", selectedFile, selectedFile.name]);
@@ -33,10 +33,10 @@ function Upload(props) {
         if(selectedFile != null){
             return (
                 <div>
-                  <h4>File Uploaded</h4>
                   <div className="box-preview">
                   <img src={src} alt={alt}></img>
-                    </div>  
+                    </div> 
+                    <h4 className="plsupload">File Uploaded.</h4> 
                 </div>
                 );
         }
@@ -44,7 +44,8 @@ function Upload(props) {
             return (
               <div>
                 <div className="box-preview">
-                  <h4>Choose before Pressing the Upload button</h4>
+                    <h4>Choose before Pressing the Analyze button</h4>
+
                 </div>
               </div>  
             );
@@ -52,15 +53,20 @@ function Upload(props) {
     }
 
     return (
-        <div  class="upload-component">
-            <h1>
+        <div  className="upload-component">
+            <h1 className="plsupload">
             Please Upload a File
             </h1>
             <div className="uploading">
-                <input type="file" accept="image/*" onChange={onFileChange} />
-                <button onClick={onFileUpload}>
-                  Upload
-                </button>
+
+                <input type="file" accept="image/*" style={{display:'none'}}  id="actual-btn" onChange={onFileChange} />
+                <label htmlFor="actual-btn">Choose File</label>
+
+
+                <input type="button" style={{display:'none'}} id="upload-btn" onClick={onFileUpload}/>
+                  
+                <label htmlFor="upload-btn">Analyze</label>
+                
             </div>
             {fileData()}
         </div>
